@@ -5,19 +5,18 @@ import "fmt"
 func main() {
 	var x int
 
-	fmt.Print("Masukkan bilangan bulat positif (<= 999): ")
+	fmt.Print("masukan bilangan bulat positif kurang dari atau sama dengan (<= 999): ")
 	fmt.Scan(&x)
 
-	if x <= 0 || x > 999 {
-		fmt.Println("Masukkan bilangan bulat positif kurang dari 999 yang valid.")
-		return
-	} else {
+	if x <= 999 {
 		d3 := x % 10
+		x = x / 10
 		d2 := x % 10
-		d1 := x % 10
+		x = x / 10
+		d1 := x 
 
-		fmt.Printf("Digit pertama: %d\n", d1)
-		fmt.Printf("Digit kedua: %d\n", d2)
-		fmt.Printf("Digit ketiga: %d\n", d3)
-	}
-}
+		fmt.Println( d1, d2, d3 )
+		 } else {
+			fmt.Println(" input tidak valid. bilangan harus kurang dari atau sama dengan 999.")
+		 }
+	} 
